@@ -20,6 +20,11 @@ export const Route = createFileRoute("/play/$puzzleId")({
 
 function PlayPage() {
   const { puzzleId } = Route.useParams();
+  return <PlayInner key={puzzleId} />;
+}
+
+function PlayInner() {
+  const { puzzleId } = Route.useParams();
   const navigate = useNavigate();
   const { settings } = useSettings();
 
