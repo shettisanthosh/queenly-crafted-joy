@@ -57,6 +57,7 @@ export const Board = memo(function Board({
         className="grid gap-[2px] rounded-xl overflow-hidden"
         style={{
           gridTemplateColumns: `repeat(${n}, minmax(0, 1fr))`,
+          gridTemplateRows: `repeat(${n}, minmax(0, 1fr))`,
           aspectRatio: "1 / 1",
         }}
       >
@@ -81,7 +82,7 @@ export const Board = memo(function Board({
                 onClick={() => onCell(r, c)}
                 aria-label={`Row ${r + 1} column ${c + 1}, ${cell}`}
                 className={cn(
-                  "relative flex items-center justify-center select-none",
+                  "relative flex items-center justify-center select-none overflow-hidden",
                   "transition-transform duration-150 active:scale-95",
                   "focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:z-10",
                   inConflict && settings.animations && "animate-shake",
