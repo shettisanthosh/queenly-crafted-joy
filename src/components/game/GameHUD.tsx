@@ -41,7 +41,7 @@ export function GameHUD(props: GameHUDProps) {
         <div className="flex items-center gap-2 rounded-xl glass px-3 py-2 shadow-soft">
           <div className="text-right leading-tight">
             <p className="text-[10px] uppercase tracking-wider text-muted-foreground">Time</p>
-            <p className="font-mono text-lg font-semibold tabular-nums">
+            <p className="font-mono text-lg font-semibold tabular-nums" suppressHydrationWarning>
               {formatTime(props.elapsedMs)}
             </p>
           </div>

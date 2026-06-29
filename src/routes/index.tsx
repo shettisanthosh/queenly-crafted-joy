@@ -78,14 +78,14 @@ function Home() {
                     <Link
                       to="/play/$puzzleId"
                       params={{ puzzleId: active.puzzleId }}
-                      className="inline-flex items-center gap-2 rounded-2xl bg-white text-foreground px-5 py-3 font-semibold shadow-soft hover:scale-[1.02] transition"
+                      className="inline-flex items-center gap-2 rounded-2xl bg-accent text-accent-foreground px-5 py-3 font-semibold shadow-soft hover:scale-[1.02] transition"
                     >
-                      <Play className="h-4 w-4" fill="currentColor" /> Continue · {formatTime(active.elapsedMs)}
+                      <Play className="h-4 w-4" fill="currentColor" /> Continue · <span suppressHydrationWarning>{formatTime(active.elapsedMs)}</span>
                     </Link>
                   ) : (
                     <button
                       onClick={() => startDifficulty("easy")}
-                      className="inline-flex items-center gap-2 rounded-2xl bg-white text-foreground px-5 py-3 font-semibold shadow-soft hover:scale-[1.02] transition"
+                      className="inline-flex items-center gap-2 rounded-2xl bg-accent text-accent-foreground px-5 py-3 font-semibold shadow-soft hover:scale-[1.02] transition"
                     >
                       <Play className="h-4 w-4" fill="currentColor" /> Play now
                     </button>
