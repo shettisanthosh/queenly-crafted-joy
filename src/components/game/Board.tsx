@@ -57,6 +57,7 @@ export const Board = memo(function Board({
         className="grid gap-[2px] rounded-xl overflow-hidden"
         style={{
           gridTemplateColumns: `repeat(${n}, minmax(0, 1fr))`,
+          gridTemplateRows: `repeat(${n}, minmax(0, 1fr))`,
           aspectRatio: "1 / 1",
         }}
       >
