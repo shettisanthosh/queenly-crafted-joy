@@ -54,7 +54,7 @@ function DailyPage() {
             </p>
             <button
               onClick={() => navigate({ to: "/play/$puzzleId", params: { puzzleId: todayPuzzle.id } })}
-              className="mt-5 inline-flex items-center gap-2 rounded-2xl bg-white text-foreground px-5 py-3 font-semibold shadow-soft hover:scale-[1.02] transition"
+              className="mt-5 inline-flex items-center gap-2 rounded-2xl bg-accent text-accent-foreground px-5 py-3 font-semibold shadow-soft hover:scale-[1.02] transition"
             >
               {todayDone ? "Replay" : "Start today's puzzle"} <ArrowRight className="h-4 w-4" />
             </button>
